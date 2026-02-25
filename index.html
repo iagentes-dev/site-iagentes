@@ -1,29 +1,236 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <title>iAgentes | Treinamento Profissional de Agentes de IA</title>
-    <meta name="description" content="Agentes de IA treinados sob medida para sua empresa. Automação inteligente de atendimento, vendas, suporte. Treinamento personalizado + integração completa." />
-    <meta name="author" content="iAgentes" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iAgentes - Agentes de IA para Empresas</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #e74c3c;
+        }
+        .hero {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+        }
+        .hero-content {
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #fff 0%, #e74c3c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            font-size: 20px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        .cta-form {
+            background: rgba(255,255,255,0.05);
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .form-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+            color: #fff;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #e74c3c;
+        }
+        input::placeholder, textarea::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+        button {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+        }
+        .features {
+            padding: 60px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .feature {
+            padding: 24px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .feature h3 {
+            color: #e74c3c;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+        .feature p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.6;
+        }
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .success-message {
+            display: none;
+            background: rgba(46, 204, 113, 0.1);
+            border: 1px solid #2ecc71;
+            color: #2ecc71;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 16px;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 36px; }
+            .subtitle { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">iAgentes</div>
+        </div>
+    </header>
 
-    <meta property="og:title" content="iAgentes | Treinamento Profissional de Agentes de IA" />
-    <meta property="og:description" content="Agentes de IA treinados sob medida para sua empresa. Automação inteligente sem perder qualidade." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://iagentes.dev" />
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Agentes de IA que Trabalham por Você</h1>
+                <p class="subtitle">
+                    Treinamos agentes de IA sob medida para empresas que querem automação 
+                    inteligente sem perder qualidade. Atendimento 24/7, vendas automatizadas 
+                    e workflows inteligentes.
+                </p>
+                
+                <div class="cta-form">
+                    <h2 class="form-title">🚀 Quero um Agente de IA para minha empresa</h2>
+                    <form id="leadForm" action="https://formspree.io/f/xnqevwrd" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="nome" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Seu e-mail corporativo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="empresa" placeholder="Nome da empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="desafio" rows="3" placeholder="Qual seu maior desafio hoje? (atendimento, vendas, operações...)" required></textarea>
+                        </div>
+                        <button type="submit">Solicitar Proposta Gratuita</button>
+                    </form>
+                    <div id="successMsg" class="success-message">
+                        ✅ Obrigado! Entraremos em contato em até 24 horas.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="iAgentes | Treinamento Profissional de Agentes de IA" />
-    <meta name="twitter:description" content="Agentes de IA treinados sob medida para sua empresa. Automação inteligente sem perder qualidade." />
-  </head>
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>🎯 Treinamento Sob Medida</h3>
+                    <p>Seu agente aprende seu negócio, processos e tom de voz. Não é um chatbot genérico.</p>
+                </div>
+                <div class="feature">
+                    <h3>⚡ Integrações Prontas</h3>
+                    <p>Conectamos com seu CRM, WhatsApp, e-mail, Notion, Google Workspace e mais.</p>
+                </div>
+                <div class="feature">
+                    <h3>📈 Evolução Contínua</h3>
+                    <p>Seu agente melhora com o tempo, aprendendo com interações e feedback.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <footer>
+        <div class="container">
+            <p>© 2026 iAgentes - Inteligência Avançada</p>
+            <p style="margin-top: 8px; font-size: 14px;">contato@iagentes.com.br</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            const data = new FormData(form);
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    form.style.display = 'none';
+                    document.getElementById('successMsg').style.display = 'block';
+                }
+            }).catch(error => {
+                alert('Erro ao enviar. Tente novamente ou envie e-mail para contato@iagentes.com.br');
+            });
+        });
+    </script>
+</body>
 </html>
