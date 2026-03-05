@@ -4,7 +4,6 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { SplineScene } from "@/components/ui/spline";
 import { Spotlight } from "@/components/ui/spotlight";
-import { TextRotate } from "@/components/ui/text-rotate";
 import heroDashboard from "@/assets/hero-dashboard.jpg";
 
 const HeroSection = () => {
@@ -30,15 +29,12 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden bg-background">
-      {/* Spotlight effect */}
       <Spotlight size={400} className="z-10" />
       
-      {/* Background gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-background to-background opacity-60"></div>
       
       <div className="container mx-auto max-w-7xl relative z-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -52,28 +48,15 @@ const HeroSection = () => {
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 backdrop-blur-sm border border-primary/30 shadow-lg shadow-primary/10"
             >
               <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-              <span className="text-sm font-semibold text-foreground/90">Agentes de</span>
-              <TextRotate
-                texts={["IA Treinados", "IA Inteligentes"]}
-                rotationInterval={3500}
-                mainClassName="inline-flex bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary/80 to-primary/60 font-bold"
-                staggerDuration={0.04}
-                staggerFrom="center"
-                transition={{ 
-                  type: "spring", 
-                  damping: 20, 
-                  stiffness: 200 
-                }}
-                splitBy="characters"
-              />
+              <span className="text-sm font-semibold text-foreground/90">IA que trabalha — não chatbot</span>
             </motion.div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70 leading-tight pb-2">
-              Automação Inteligente Que Realmente Funciona.
+              Seu próximo funcionário nunca dorme.
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Pare de perder clientes por demora no atendimento. Treinamos agentes de IA sob medida para SEU negócio — não chatbot genérico.
+              Agentes de IA treinados com o DNA do seu negócio. Atendem, qualificam e vendem 24/7 — integrados ao seu WhatsApp, CRM e sistemas. Você traz seu token, sem markup.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -92,12 +75,11 @@ const HeroSection = () => {
                 onClick={scrollToCases}
                 className="shadow-sm hover:shadow-md transition-all border-primary/20 hover:border-primary/40"
               >
-                Ver Como Funciona
+                Ver Resultados Reais
               </Button>
             </div>
           </motion.div>
 
-          {/* Right: 3D Spline Scene */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -116,7 +98,6 @@ const HeroSection = () => {
                   scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                   className="w-full h-full"
                 />
-                {/* Gradient overlay for better text contrast */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent pointer-events-none"></div>
               </div>
             )}

@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { Bot, Clock, TrendingUp } from "lucide-react";
+import { Clock, Shield, Zap } from "lucide-react";
 
 const TrustBar = () => {
   const metrics = [
-    { icon: Bot, label: "Agentes Treinados", value: "100+ agentes" },
-    { icon: Clock, label: "Tempo Médio Resposta", value: "<30 segundos" },
-    { icon: TrendingUp, label: "Satisfação Clientes", value: "92%" },
+    { icon: Zap, label: "Uptime", value: "99.9%" },
+    { icon: Clock, label: "Resposta", value: "<100ms" },
+    { icon: Shield, label: "Segurança", value: "SOC 2" },
   ];
 
   return (
@@ -19,7 +19,7 @@ const TrustBar = () => {
           className="text-center mb-8"
         >
           <p className="text-lg font-semibold text-muted-foreground">
-            Confiado por empresas que automatizam com inteligência
+            Infraestrutura enterprise. Preço de startup.
           </p>
         </motion.div>
 

@@ -7,15 +7,15 @@ import caseMentoria from "@/assets/case-mentoria.jpg";
 const CaseStudies = () => {
   const cases = [
     {
-      title: "Atendimento 24/7 com IA",
-      description: "Agente treinado para atendimento completo — qualificação, dúvidas, agendamento. Cliente nunca mais perde lead por demora. Resposta instantânea, contexto completo.",
-      results: ["85% leads qualificados sem humano", "92% satisfação clientes", "70% redução tempo atendimento"],
+      title: "Atendimento 24/7 — Sem Contratar",
+      description: "Agente treinado com base de conhecimento completa. Responde dúvidas, qualifica leads e agenda reuniões — instantaneamente, qualquer horário. Cliente nunca mais espera.",
+      results: ["70% redução no volume de suporte repetitivo", "Economia de $8k/mês em equipe", "Resposta instantânea vs 24h antes"],
       image: caseCRM,
     },
     {
-      title: "Agente de Vendas Inteligente",
-      description: "IA treinada com playbook de vendas completo. Qualifica leads, agenda demos, envia propostas. Vendedor só entra na conversa qualificada. Taxa conversão 3x maior.",
-      results: ["3x mais demos agendadas", "60% menos tempo prospecção", "45% aumento conversão"],
+      title: "Vendas Que Não Param",
+      description: "Agente SDR qualifica leads automaticamente, agenda demos e envia propostas. Vendedor só entra na conversa quente. Mais demos, menos tempo perdido.",
+      results: ["3x mais demos agendadas", "20% maior conversão", "60% menos tempo de prospecção"],
       image: caseMentoria,
     },
   ];
@@ -35,10 +35,10 @@ const CaseStudies = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
-            Agentes Que Criamos Para Empresas Reais
+            Resultados Reais
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Casos reais de automação inteligente com resultados mensuráveis
+            Menos dor, mais como resolvemos. Veja na prática.
           </p>
         </motion.div>
 
@@ -90,7 +90,7 @@ const CaseStudies = () => {
           className="text-center mt-16"
         >
           <p className="text-xl font-semibold mb-6 text-foreground">
-            Quer um agente assim para sua empresa?
+            Quer resultados assim?
           </p>
           <Button size="lg" onClick={scrollToContact} className="group shadow-lg">
             Quero Meu Agente

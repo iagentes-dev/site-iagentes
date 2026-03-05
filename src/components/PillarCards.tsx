@@ -5,18 +5,18 @@ const PillarCards = () => {
   const pillars = [
     {
       icon: Brain,
-      title: "Agentes Treinados Sob Medida",
-      description: "Não é chatbot genérico. Treinamos IA com o DNA da sua empresa — linguagem, processos, tom de voz, conhecimento específico.",
+      title: "Treinado Com Seu DNA",
+      description: "Não é chatbot genérico. Treinamos com a linguagem, processos, tom de voz e conhecimento específico da sua empresa. Agente entende seu negócio.",
     },
     {
       icon: Plug,
-      title: "Integração com Seus Sistemas",
-      description: "Conectamos com CRM, WhatsApp, Email, Telegram, Slack. Agente acessa dados reais e age — não só conversa.",
+      title: "Integrado Aos Seus Sistemas",
+      description: "WhatsApp, Telegram, Slack, CRM, APIs — 10+ canais. Agente acessa dados reais e age: qualifica, agenda, responde. Não só conversa.",
     },
     {
       icon: LineChart,
-      title: "Evolução + Suporte Contínuo",
-      description: "Monitoramos performance, ajustamos respostas, adicionamos conhecimento. Agente melhora com uso real.",
+      title: "Evolui Com Uso Real",
+      description: "Monitoramos, ajustamos, melhoramos. Seu agente fica mais inteligente com cada interação. Suporte consultivo incluso — não é instala e esquece.",
     },
   ];
 
@@ -31,8 +31,11 @@ const PillarCards = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
-            Agentes Que Realmente Trabalham Para Você
+            Como Resolvemos
           </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+            Não vendemos IA. Vendemos um funcionário que nunca dorme.
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
